@@ -64,7 +64,7 @@ jobs:
         run: |
           cd cdn
           git config http.postBuffer 524288000
-          git lfs track "animated/*.png"
+          git lfs track "*.png"
           git add Emojis -f
 
       - name: Push changes
