@@ -41,30 +41,30 @@ jobs:
       - name: Execute script
         run: python cdn/scripts/update_emojis.py
         
-      - name: Downscale PNG images
-        run: |
-          cd cdn
-          for emoji in $(ls Emojis); do
-            for style in 3d animated; do
-              if [ -d "Emojis/$emoji/$style" ]; then
-                for size in 128 64; do
-                  if [ -d "Emojis/$emoji/$style/default" ]; then
-                    for skinTone in $(ls Emojis/$emoji/$style); do
-                      convert -coalesce Emojis/$emoji/$style/$skinTone/256.png -resize $sizex$size Emojis/$emoji/$style/$skinTone/$size.png
-                    done
-                  else
-                    convert -coalesce Emojis/$emoji/$style/256.png -resize $sizex$size Emojis/$emoji/$style/$size.png
-                  fi
-                done
-              fi
-            done
-          done
+      # - name: Downscale PNG images
+      #   run: |
+      #     cd cdn
+      #     for emoji in $(ls Emojis); do
+      #       for style in 3d animated; do
+      #         if [ -d "Emojis/$emoji/$style" ]; then
+      #           for size in 128 64; do
+      #             if [ -d "Emojis/$emoji/$style/default" ]; then
+      #               for skinTone in $(ls Emojis/$emoji/$style); do
+      #                 convert -coalesce Emojis/$emoji/$style/$skinTone/256.png -resize $sizex$size Emojis/$emoji/$style/$skinTone/$size.png
+      #               done
+      #             else
+      #               convert -coalesce Emojis/$emoji/$style/256.png -resize $sizex$size Emojis/$emoji/$style/$size.png
+      #             fi
+      #           done
+      #         fi
+      #       done
+      #     done
 
       - name: Add changes
         run: |
           cd cdn
           git config http.postBuffer 524288000
-          git lfs track "*.png"
+          # git lfs track "*.png"
           git add Emojis -f
 
       - name: Push changes
