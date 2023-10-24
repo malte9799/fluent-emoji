@@ -41,41 +41,49 @@ jobs:
       - name: Execute script
         run: python cdn/scripts/update_emojis.py
         
-      # - name: Downscale PNG images
+      - name: Downscale PNG images
+        run: |
+          cd cdn
+          for emoji in $(ls Emojis); do
+            for style in 3d animated; do
+              if [ -d "Emojis/$emoji/$style" ]; then
+                for size in 128 64; do
+                  if [ -d "Emojis/$emoji/$style/default" ]; then
+                    for skinTone in $(ls Emojis/$emoji/$style); do
+                      convert -coalesce Emojis/$emoji/$style/$skinTone/256.png -resize $sizex$size Emojis/$emoji/$style/$skinTone/$size.png
+                    done
+                  else
+                    convert -coalesce Emojis/$emoji/$style/256.png -resize $sizex$size Emojis/$emoji/$style/$size.png
+                  fi
+                done
+              fi
+            done
+          done
+
+      - name: Get folder size
+        uses: actions/github-script@v5
+        with:
+          script: |
+            const { execSync } = require('child_process');
+            const folderSize = execSync('du -s ./', { encoding: 'utf8' });
+            console.log(folderSize);
+
+      # - name: Add changes
       #   run: |
       #     cd cdn
-      #     for emoji in $(ls Emojis); do
-      #       for style in 3d animated; do
-      #         if [ -d "Emojis/$emoji/$style" ]; then
-      #           for size in 128 64; do
-      #             if [ -d "Emojis/$emoji/$style/default" ]; then
-      #               for skinTone in $(ls Emojis/$emoji/$style); do
-      #                 convert -coalesce Emojis/$emoji/$style/$skinTone/256.png -resize $sizex$size Emojis/$emoji/$style/$skinTone/$size.png
-      #               done
-      #             else
-      #               convert -coalesce Emojis/$emoji/$style/256.png -resize $sizex$size Emojis/$emoji/$style/$size.png
-      #             fi
-      #           done
-      #         fi
-      #       done
-      #     done
+      #     git config http.postBuffer 524288000
+      #     # git lfs track "*.png"
+      #     git add Emojis -f
 
-      - name: Add changes
-        run: |
-          cd cdn
-          git config http.postBuffer 524288000
-          # git lfs track "*.png"
-          git add Emojis -f
-
-      - name: Push changes
-        run: |
-          cd cdn
-          git diff --cached --binary | wc -c
-          git config user.name github-actions[bot]
-          git config user.email github-actions@github.com
-          if ! git diff-index --quiet HEAD; then
-            git commit -m "Updates"
-            git push -v
-          else
-            echo "No changes detected!"
-          fi
+      # - name: Push changes
+      #   run: |
+      #     cd cdn
+      #     git diff --cached --binary | wc -c
+      #     git config user.name github-actions[bot]
+      #     git config user.email github-actions@github.com
+      #     if ! git diff-index --quiet HEAD; then
+      #       git commit -m "Updates"
+      #       git push -v
+      #     else
+      #       echo "No changes detected!"
+      #     fi
