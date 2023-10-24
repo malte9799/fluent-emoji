@@ -60,31 +60,22 @@ jobs:
             done
           done
 
-      - name: Get folder size
-        uses: actions/github-script@v5
-        with:
-          script: |
-            const { execSync } = require('child_process');
-            const folderSize = execSync('du -s /cdn', { encoding: 'utf8' });
-            const folderSizeGb = folderSize / 1073741824;
-            console.log(folderSizeGb);
+      - name: Add changes
+        run: |
+          cd cdn
+          git config http.postBuffer 524288000
+          # git lfs track "*.png"
+          git add Emojis -f
 
-      # - name: Add changes
-      #   run: |
-      #     cd cdn
-      #     git config http.postBuffer 524288000
-      #     # git lfs track "*.png"
-      #     git add Emojis -f
-
-      # - name: Push changes
-      #   run: |
-      #     cd cdn
-      #     git diff --cached --binary | wc -c
-      #     git config user.name github-actions[bot]
-      #     git config user.email github-actions@github.com
-      #     if ! git diff-index --quiet HEAD; then
-      #       git commit -m "Updates"
-      #       git push -v
-      #     else
-      #       echo "No changes detected!"
-      #     fi
+      - name: Push changes
+        run: |
+          cd cdn
+          git diff --cached --binary | wc -c
+          git config user.name github-actions[bot]
+          git config user.email github-actions@github.com
+          if ! git diff-index --quiet HEAD; then
+            git commit -m "Updates"
+            git push -v
+          else
+            echo "No changes detected!"
+          fi
