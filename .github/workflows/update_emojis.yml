@@ -66,7 +66,7 @@ jobs:
           script: |
             const { execSync } = require('child_process');
             const folderSize = execSync('du -s ./', { encoding: 'utf8' });
-            console.log(folderSize);
+            console.log(folderSize/1073741824);
 
       # - name: Add changes
       #   run: |
