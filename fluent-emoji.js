@@ -31,9 +31,9 @@ class FluentEmojiElement extends HTMLElement {
 		}
 
 		this.emojiPath = this.emoji.replaceAll('-', '/');
-		this.extension = this.emoji.includes('3d') || this.emoji.includes('animated') ? '/256.png' : '.svg';
+		this.extension = this.emoji.includes('3d') || this.emoji.includes('animated') ? '.png' : '.svg';
 		img.src = base_url + this.emojiPath + this.extension;
-		if (this.extension.includes('.png')) img.srcset = `${base_url}${this.emojiPath}/256.png 256w, ${base_url}${this.emojiPath}/128.png 128w, ${base_url}${this.emojiPath}/64.png 64w, ${base_url}${this.emojiPath}/32.png 32w`;
+		// if (this.extension.includes('.png')) img.srcset = `${base_url}${this.emojiPath}/256.png 256w, ${base_url}${this.emojiPath}/128.png 128w, ${base_url}${this.emojiPath}/64.png 64w, ${base_url}${this.emojiPath}/32.png 32w`;
 
 		this.parentNode.replaceChild(img, this);
 	}

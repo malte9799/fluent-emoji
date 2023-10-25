@@ -59,7 +59,8 @@ def try_varients(emoji):
 def save_image(img_path, output_path, isAnimated=False):
   os.makedirs(os.path.dirname(output_path), exist_ok=True)
   extension = os.path.splitext(img_path)[1]
-  shutil.copy(img_path, f'{output_path}.{extension}')
+  output_path = output_path + extension
+  shutil.copy(img_path, output_path)
   # if (extension == '.svg'):
   #   os.makedirs(os.path.dirname(output_path), exist_ok=True)
   #   shutil.copy(img_path, f'{output_path}.svg')
