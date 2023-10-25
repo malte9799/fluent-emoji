@@ -57,13 +57,15 @@ def try_varients(emoji):
   return False
 
 def save_image(img_path, output_path, isAnimated=False):
+  os.makedirs(os.path.dirname(output_path), exist_ok=True)
   extension = os.path.splitext(img_path)[1]
-  if (extension == '.svg'):
-    os.makedirs(os.path.dirname(output_path), exist_ok=True)
-    shutil.copy(img_path, f'{output_path}.svg')
-  else:
-    os.makedirs(output_path, exist_ok=True)
-    shutil.copy(img_path, f'{output_path}/256.png')
+  shutil.copy(img_path, f'{output_path}.{extension}')
+  # if (extension == '.svg'):
+  #   os.makedirs(os.path.dirname(output_path), exist_ok=True)
+  #   shutil.copy(img_path, f'{output_path}.svg')
+  # else:
+  #   os.makedirs(output_path, exist_ok=True)
+  #   shutil.copy(img_path, f'{output_path}/256.png')
 
 def fetch_regular():
   for emoji_name in os.listdir(dir_regular):
