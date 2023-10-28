@@ -1,1 +1,1 @@
-# fluent-emoji-2
+# fluent-emoji
