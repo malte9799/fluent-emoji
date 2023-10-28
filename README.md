@@ -5,7 +5,7 @@
 ### Setup
 
 ```bash
-npm i fluent-emoji
+npm i fluent-emoji-extended
 ```
 
 ### Usage
@@ -14,7 +14,7 @@ Default type: 3d
 Default color: Default (yellow)
 
 ```tsx
-import { WhiteFlag, Beaver, Astronaut, Alien } from 'fluent-emoji'
+import { WhiteFlag, Beaver, Astronaut, Alien } from 'fluent-emoji-extended'
 
 export function App() {
   return
