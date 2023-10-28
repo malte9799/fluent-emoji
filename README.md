@@ -10,6 +10,7 @@ npm i fluent-emoji
 
 ### Usage
 Default type: 3d
+
 Default color: Default (yellow)
 
 ```tsx
