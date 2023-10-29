@@ -64,7 +64,7 @@ jobs:
         run: |
           cd cdn
           git config user.name 'github-actions[bot]'
-          git config user.email 'actions@github.com'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
 
       - name: Add changes
         run: |
