@@ -18,7 +18,7 @@ img_sizes = [128, 64]
 
 def format(string):
   string = unidecode(string).lower().replace(' ', '_').replace('-', '_')
-  string = re.sub(r"\.png|[(),'.]", '', string)
+  string = re.sub(r"\.png|[(),'.!]", '', string)
   return string.replace('_blond_', '_blonde_')
 
 def is_animated_png(file_path):
