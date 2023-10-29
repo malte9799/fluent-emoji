@@ -1,0 +1,19 @@
+import React from 'react'
+
+const baseURL = 'https://raw.githubusercontent.com/malte9799/fluent-emoji/main/Emojis';
+
+function createComponent(name:string, hasSkinTones:boolean) {
+  return ({ src, alt, type='3d', skin='default', ...rest }:{src:string, alt:string, type:string, skin:string}) => {
+    const extension = type.match(/3d|animated/) ? 'png' : 'svg'
+    let url = `${baseURL}/${name}/${type}`
+    url += hasSkinTones ? `/${skin}.${extension}` : `.${extension}`
+
+    return (
+      <img
+        src={url}
+        alt={alt || name}
+        {...rest}
+      />
+    );
+  }
+}

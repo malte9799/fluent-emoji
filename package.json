@@ -1,0 +1,34 @@
+{
+	"name": "fluent_emoji-react",
+	"version": "0.1.0",
+	"description": "A React library for Microsoft's Fluent Emoji.",
+	"author": "Malte9799",
+	"license": "MIT",
+	"keywords": [
+		"front-end",
+		"emojis",
+		"fluentui-emoji",
+		"typescript",
+		"javascript",
+		"react",
+		"svg"
+	],
+	"main": "index.js",
+	"exports": "./index.js",
+	"types": "index.d.ts",
+	"files": [
+		"index.js",
+		"index.d.ts"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/malte9799/fluent-emoji.git",
+		"branch": "react"
+	},
+	"bugs": "https://github.com/malte9799/fluent-emoji/issues",
+	"homepage": "malte9799.vercel.app/fluent-emoji",
+	"peerDependencies": {
+		"react": "^18"
+	},
+	"type": "module"
+}
