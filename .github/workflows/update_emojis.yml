@@ -3,7 +3,7 @@ name: Update Emojis
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * 0'
+    - cron: '0 0 * * 0' # every Sunday at midnight (UTC)
 
 jobs:
   update_emojis:
@@ -60,6 +60,12 @@ jobs:
       #       done
       #     done
 
+      - name: Git config
+        run: |
+          cd cdn
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
       - name: Add changes
         run: |
           cd cdn
@@ -71,8 +77,6 @@ jobs:
         run: |
           cd cdn
           git diff --cached --binary | wc -c
-          git config user.name 'github-actions[bot]'
-          git config user.email 'github-actions[bot]@users.noreply.github.com'
           if ! git diff-index --quiet HEAD; then
             git commit -m "Updates"
             git push -v
