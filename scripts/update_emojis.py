@@ -130,6 +130,8 @@ def fetch_animated():
 
 def main():
   try:
+    shutil.rmtree(dir_output, ignore_errors=True)
+    
     fetch_regular()
     fetch_animated()
 
