@@ -40,7 +40,7 @@ jobs:
 
       - name: Execute script
         run: python cdn/scripts/update_emojis.py
-        
+
       # - name: Downscale PNG images
       #   run: |
       #     cd cdn
@@ -71,8 +71,8 @@ jobs:
         run: |
           cd cdn
           git diff --cached --binary | wc -c
-          git config user.name github-actions[bot]
-          git config user.email github-actions@github.com
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
           if ! git diff-index --quiet HEAD; then
             git commit -m "Updates"
             git push -v
