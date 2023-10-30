@@ -4,5 +4,5 @@ updates:
     directory: '/'
     schedule:
       interval: 'daily'
-    target-branch: 'react'
+    target-branch: 'npm_build'
     versioning-strategy: 'widen'
