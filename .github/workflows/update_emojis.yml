@@ -60,26 +60,38 @@ jobs:
       #       done
       #     done
 
-      - name: Git config
-        run: |
-          cd cdn
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+      - name: Create pull Requirements
+        uses: peter-evans/create-pull-request@v5
+        with:
+          reviewers: malte9799
+          token: ${{ secrets.ACTIONS_GITHUB_TOKEN }}
+          title: Update emojis
+          author: GitHub <noreply@github.com>
+          commit-message: Update emojis
+          delete-branch: true
+          branch: update
+          path: cdn
 
-      - name: Add changes
-        run: |
-          cd cdn
-          git config http.postBuffer 524288000
-          # git lfs track "*.png"
-          git add Emojis -f
+      # - name: Git config
+      #   run: |
+      #     cd cdn
+      #     git config user.name 'github-actions[bot]'
+      #     git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
 
-      - name: Push changes
-        run: |
-          cd cdn
-          git diff --cached --binary | wc -c
-          if ! git diff-index --quiet HEAD; then
-            git commit -m "Updates"
-            git push -v
-          else
-            echo "No changes detected!"
-          fi
+      # - name: Add changes
+      #   run: |
+      #     cd cdn
+      #     git config http.postBuffer 524288000
+      #     # git lfs track "*.png"
+      #     git add Emojis -f
+
+      # - name: Push changes
+      #   run: |
+      #     cd cdn
+      #     git diff --cached --binary | wc -c
+      #     if ! git diff-index --quiet HEAD; then
+      #       git commit -m "Updates"
+      #       git push -v
+      #     else
+      #       echo "No changes detected!"
+      #     fi
