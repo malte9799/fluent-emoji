@@ -1,18 +1,20 @@
 import { ensureDir } from 'https://deno.land/std@0.204.0/fs/ensure_dir.ts';
 import { build, stop } from 'https://deno.land/x/esbuild@v0.19.4/mod.js';
 
-const imports: { [key: string]: any } = {};
-for await (const file of Deno.readDir('./src/packages')) {
-	const name = file.name.split('.')[0];
-	const filePath = './packages/' + file.name;
+const baseDir = './src';
 
-	imports[name] = (await import(filePath)) as object;
+const packagesPath = `${baseDir}/packages`;
+const imports: { [key: string]: ImportedObject } = {};
+for await (const file of Deno.readDir(packagesPath)) {
+	const name = file.name.split('.')[0];
+	const filePath = `./packages/${file.name}`;
+	imports[name] = await import(filePath);
 }
 
 const emojis: Record<string, EmojiData> = await (await fetch('https://raw.githubusercontent.com/malte9799/fluent-emoji/main/Emojis/metadata.json')).json();
 delete emojis['not_found'];
-const base_package = await Deno.readTextFile('./src/base_package.json');
-const license = await Deno.readTextFile('./license');
+const base_package = await Deno.readTextFile(`${baseDir}/base_package.json`);
+const license = await Deno.readTextFile(`./license`);
 
 Object.entries(emojis).forEach(([emoji_name, emoji_data]: [string, EmojiData]) => {
 	const name = emoji_name
@@ -28,35 +30,6 @@ Object.entries(emojis).forEach(([emoji_name, emoji_data]: [string, EmojiData]) =
 	}
 });
 
-async function generate_package(moduleName: string, module: any) {
-	const module_path = './build/' + moduleName;
-	let packageFile = base_package;
-	packageFile = packageFile.replaceAll('{name}', module.config.name);
-	packageFile = packageFile.replaceAll('{displayName}', module.config.displayName);
-	packageFile = JSON.parse(packageFile);
-	packageFile.peerDependencies = module.config.peerDependencies;
-
-	await ensureDir(module_path);
-	await ensureDir(module_path + '/cache');
-
-	Deno.writeTextFile(module_path + '/package.json', JSON.stringify(packageFile, null, 2));
-	Deno.writeTextFile(module_path + '/license', license);
-	Deno.writeTextFile(module_path + '/index.d.ts', module.getTypes());
-
-	await Deno.writeTextFile(module_path + '/cache/index.tsx', module.getComponents());
-
-	await build({
-		entryPoints: [module_path + '/cache/index.tsx'],
-		allowOverwrite: true,
-		format: 'esm',
-		bundle: true,
-		minify: true,
-		target: 'es2020',
-		external: module.config.external,
-		outfile: module_path + '/index.js',
-	});
-}
-
 const promises = [];
 for (const [moduleName, module] of Object.entries(imports)) {
 	promises.push(generate_package(moduleName, module));
@@ -65,3 +38,34 @@ for (const [moduleName, module] of Object.entries(imports)) {
 Promise.all(promises).then(() => {
 	stop();
 });
+
+async function generate_package(moduleName: string, module: ImportedObject) {
+	const modulePath = `./build/${moduleName}`;
+	let packageFile = base_package;
+	packageFile = packageFile.replaceAll('{name}', module.config.name);
+
+	packageFile = packageFile.replaceAll('{displayName}', module.config.displayName);
+	const packageFileJSON = JSON.parse(packageFile);
+	packageFileJSON.peerDependencies = module.config.peerDependencies;
+	packageFile = JSON.stringify(packageFileJSON, null, 2);
+
+	await ensureDir(modulePath);
+	await ensureDir(`${modulePath}/cache`);
+
+	Deno.writeTextFile(`${modulePath}/package.json`, packageFile);
+	Deno.writeTextFile(`${modulePath}/license`, license);
+	Deno.writeTextFile(`${modulePath}/index.d.ts`, module.getTypes());
+
+	await Deno.writeTextFile(`${modulePath}/cache/index.tsx`, module.getComponents());
+
+	await build({
+		entryPoints: [`${modulePath}/cache/index.tsx`],
+		allowOverwrite: true,
+		format: 'esm',
+		bundle: true,
+		minify: true,
+		target: 'es2020',
+		external: module.config.external,
+		outfile: `${modulePath}/index.js`,
+	});
+}

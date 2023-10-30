@@ -1,5 +1,5 @@
 {
-	"name": "fluent_emoji-{name}",
+	"name": "fluent-emoji-{name}",
 	"version": "0.1.0",
 	"description": "A {displayName} library for Microsoft's Fluent Emoji.",
 	"author": "Malte9799",
@@ -9,13 +9,21 @@
 	"exports": "./index.js",
 	"types": "index.d.ts",
 	"files": ["index.js", "index.d.ts"],
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/malte9799/fluent-emoji.git",
-		"branch": "{name}"
-	},
+	"type": "module",
+	"peerDependencies": {},
+	"repository": "https://github.com/malte9799/fluent-emoji.git",
 	"bugs": "https://github.com/malte9799/fluent-emoji/issues",
 	"homepage": "malte9799.vercel.app/fluent-emoji",
-	"peerDependencies": {},
-	"type": "module"
+	"iconSetInfo": {
+		"name": "Fluent Emoji",
+		"author": {
+			"name": "Microsoft Corporation",
+			"url": "https://github.com/microsoft/fluentui-emoji"
+		},
+		"license": {
+			"title": "MIT",
+			"spdx": "MIT",
+			"url": "https://github.com/microsoft/fluentui-emoji/blob/main/LICENSE"
+		}
+	}
 }

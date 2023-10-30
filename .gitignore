@@ -1,5 +1,4 @@
 node_modules
+build
 deno.lock
 package-lock.json
-index.js
-index.d.ts

@@ -10,7 +10,6 @@
 	},
 	"tasks": {
 		"build": "deno run -A ./src/build.mts",
-		"publish": "deno task build && npm publish",
-		"test": "./src/publish.bat"
+		"publish": "deno task build && ./publish.bat"
 	}
 }

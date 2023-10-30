@@ -1,7 +1,13 @@
-let types: string = `import * as React from 'react'\n\n`;
 const types_exports: string[] = [];
+let types = `
+import * as React from 'react'
 
-let components: string = `
+interface FluentEmoji extends Omit<React.ImgHTMLAttributes<HTMLImageElement>, 'src'> {
+	type?: string;
+	skin?: string;
+}\n\n`;
+
+let components = `
 import React from 'react'
 
 const baseURL = 'https://raw.githubusercontent.com/malte9799/fluent-emoji/main/Emojis/';
@@ -22,7 +28,7 @@ function createComponent(name:string, hasSkinTones:boolean) {
 }\n\n`;
 
 export function register(name: string, emoji_name: string, emoji_data: EmojiData): void {
-	types += `declare function ${name}(props: React.ImgHTMLAttributes<HTMLImageElement>): React.ReactElement\n`;
+	types += `declare function ${name}(props: FluentEmoji): React.ReactElement\n`;
 	types_exports.push(name);
 
 	components += `export const ${name} = createComponent('${emoji_name}', ${emoji_data.hasSkinTones})\n`;
