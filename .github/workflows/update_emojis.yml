@@ -66,7 +66,7 @@ jobs:
           reviewers: malte9799
           token: ${{ secrets.ACTIONS_GITHUB_TOKEN }}
           title: Update emojis
-          author: GitHub <noreply@github.com>
+          author: 'github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>'
           commit-message: Update emojis
           delete-branch: true
           branch: update
