@@ -63,14 +63,15 @@ jobs:
       - name: Create pull Requirements
         uses: peter-evans/create-pull-request@v5
         with:
-          reviewers: malte9799
-          token: ${{ secrets.ACTIONS_GITHUB_TOKEN }}
+          path: cdn
           title: Update emojis
           author: 'github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>'
+          committer: 'github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>'
           commit-message: Update emojis
-          delete-branch: true
+          reviewers: malte9799
           branch: update
-          path: cdn
+          delete-branch: true
+          token: ${{ secrets.ACTIONS_GITHUB_TOKEN }}
 
       # - name: Git config
       #   run: |
