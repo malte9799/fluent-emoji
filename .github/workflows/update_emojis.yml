@@ -34,12 +34,10 @@ jobs:
           python-version: '3.10'
 
       - name: Install Requirements
-        run: |
-          pip install unidecode
-          pip install Pillow
+        run: pip install -r cdn/src/update_emojis/requirements.txt
 
       - name: Execute script
-        run: python cdn/scripts/update_emojis.py
+        run: python cdn/src/update_emojis/main.py
 
       # - name: Downscale PNG images
       #   run: |
@@ -60,6 +58,7 @@ jobs:
       #       done
       #     done
 
+      # ------- PULL REQUEST -------
       - name: Create pull Requirements
         uses: peter-evans/create-pull-request@v5
         with:
@@ -73,6 +72,7 @@ jobs:
           delete-branch: true
           token: ${{ secrets.ACTIONS_GITHUB_TOKEN }}
 
+      # ------- PUSH -------
       # - name: Git config
       #   run: |
       #     cd cdn
