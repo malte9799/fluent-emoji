@@ -4,15 +4,47 @@ on:
   workflow_dispatch:
 
 jobs:
-  test:
+  checkout_repo_1:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        repo_name: ['microsoft/fluentui-emoji', 'Tarikul-Islam-Anik/Animated-Fluent-Emojis', '']
-        repo_path: ['emojis/regular', 'emojis/animated', 'cdn']
-        artifact_name: ['regular-emojis', 'animated-emojis', 'cdn-artifacts']
-
     steps:
-      - name: Checkout Repository
-        if: matrix.repo_name != ''
-        run: echo ${{matrix}}
+      - name: Checkout Repository 1
+        uses: actions/checkout@v4
+        with:
+          repository: microsoft/fluentui-emoji
+          token: ${{ secrets.GITHUB_TOKEN }}
+          path: emojis/repo1
+
+  checkout_repo_2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository 2
+        uses: actions/checkout@v4
+        with:
+          repository: Tarikul-Islam-Anik/Animated-Fluent-Emojis
+          token: ${{ secrets.GITHUB_TOKEN }}
+          path: emojis/repo2
+
+  checkout_repo_3:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository 3
+        uses: actions/checkout@v4
+        with:
+          path: emojis/repo3
+
+  run_script:
+    runs-on: ubuntu-latest
+    needs:
+      - checkout_repo_1
+      - checkout_repo_2
+      - checkout_repo_3
+    steps:
+      - name: Set Up Python 3.10
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Copy Directories
+        run: cp -r emojis/repo1 emojis/repo2 emojis/repo3 $GITHUB_WORKSPACE/
+
+      - run: ls
