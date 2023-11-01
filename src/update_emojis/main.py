@@ -5,7 +5,7 @@ import shutil
 import traceback
 import re
 
-# from PIL import Image
+from PIL import Image
 from unidecode import unidecode
 
 dir_regular = "./emojis/regular/assets"
@@ -26,18 +26,10 @@ def format(string):
 
 def is_animated_png(file_path):
     try:
-        with open(file_path, "rb") as f:
-            header = f.read(8)
-            return header[4:8] == b"acTL"
+        img = Image.open(file_path)
+        return hasattr(img, "n_frames") and img.n_frames > 1
     except Exception as e:
         return False
-
-
-#     try:
-#         img = Image.open(file_path)
-#         return hasattr(img, "n_frames") and img.n_frames > 1
-#     except Exception as e:
-#         return False
 
 
 def handle_metadata(emoji, metadata_path):
