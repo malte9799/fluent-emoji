@@ -14,14 +14,14 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: microsoft/fluentui-emoji
-          token: ${{ secrets.ACTIONS_GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           path: emojis/regular
 
       - name: Clone Tarikul-Islam-Anik/Animated-Fluent-Emojis
         uses: actions/checkout@v4
         with:
           repository: Tarikul-Islam-Anik/Animated-Fluent-Emojis
-          token: ${{ secrets.ACTIONS_GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           path: emojis/animated
 
       - uses: actions/checkout@v4
@@ -70,7 +70,7 @@ jobs:
           reviewers: malte9799
           branch: update
           delete-branch: true
-          token: ${{ secrets.ACTIONS_GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       # ------- PUSH -------
       # - name: Git config
