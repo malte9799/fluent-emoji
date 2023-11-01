@@ -1,0 +1,18 @@
+name: TEST
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        repo_name: ['microsoft/fluentui-emoji', 'Tarikul-Islam-Anik/Animated-Fluent-Emojis', '']
+        repo_path: ['emojis/regular', 'emojis/animated', 'cdn']
+        artifact_name: ['regular-emojis', 'animated-emojis', 'cdn-artifacts']
+
+    steps:
+      - name: Checkout Repository
+        if: matrix.repo_name != ''
+        run: echo ${{matrix}}
