@@ -63,10 +63,10 @@ jobs:
         uses: peter-evans/create-pull-request@v5
         with:
           path: cdn
-          title: Update emojis
+          title: 'Update emojis'
           author: 'github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>'
           committer: 'github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>'
-          commit-message: Update emojis
+          commit-message: 'Update emojis'
           reviewers: malte9799
           branch: update
           delete-branch: true
