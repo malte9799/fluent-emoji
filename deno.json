@@ -1,15 +1,21 @@
 {
-	"compilerOptions": {
-		"lib": ["deno.worker"]
-	},
-	"fmt": {
-		"options": {
-			"semiColons": false,
-			"singleQuote": true
-		}
-	},
-	"tasks": {
-		"build": "deno run -A ./src/build.mts",
-		"publish": "deno task build && ./publish.bat"
-	}
+  "compilerOptions": {
+    "lib": [
+      "deno.worker"
+    ]
+  },
+  "fmt": {
+    "options": {
+      "semiColons": false,
+      "singleQuote": true
+    }
+  },
+  "tasks": {
+    "build": "deno run -A ./src/build.mts",
+    "publish": "deno task build && ./publish.bat",
+    "build_react": "deno run -A ./src/build.mts react",
+    "publish_react": "deno task build react && cd build/react && npm publish",
+    "build_test": "deno run -A ./src/build.mts test",
+    "publish_test": "deno task build test && cd build/test && npm publish"
+  }
 }

@@ -5,9 +5,15 @@ const baseDir = './src';
 
 const packagesPath = `${baseDir}/packages`;
 const imports: { [key: string]: ImportedObject } = {};
-for await (const file of Deno.readDir(packagesPath)) {
-	const name = file.name.split('.')[0];
-	const filePath = `./packages/${file.name}`;
+if (Deno.args.length === 0) {
+	for await (const file of Deno.readDir(packagesPath)) {
+		const name = file.name.split('.')[0];
+		const filePath = `./packages/${file.name}`;
+		imports[name] = await import(filePath);
+	}
+} else {
+	const name = Deno.args[0];
+	const filePath = `./packages/${name}.mts`;
 	imports[name] = await import(filePath);
 }
 
@@ -31,11 +37,17 @@ Object.entries(emojis).forEach(([emoji_name, emoji_data]: [string, EmojiData]) =
 });
 
 const promises = [];
+const denoFile = JSON.parse(await Deno.readTextFile('deno.json'));
 for (const [moduleName, module] of Object.entries(imports)) {
+	console.log('Build:', moduleName);
+
 	promises.push(generate_package(moduleName, module));
+	denoFile.tasks[`build_${moduleName}`] ||= `deno run -A ./src/build.mts ${moduleName}`;
+	denoFile.tasks[`publish_${moduleName}`] ||= `deno task build ${moduleName} && cd build/${moduleName} && npm publish`;
 }
 
 Promise.all(promises).then(() => {
+	Deno.writeTextFileSync('deno.json', JSON.stringify(denoFile, null, 2));
 	stop();
 });
 
