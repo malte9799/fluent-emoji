@@ -21,7 +21,7 @@ img_sizes = [128, 64]
 def format(string):
     string = unidecode(string).lower().replace(" ", "_").replace("-", "_")
     string = re.sub(r"\.png|[(),'.!]", "", string)
-    return string.replace("_blond_", "_blonde_")
+    return string.replace("_blond_", "_blonde_").replace('dizzy_face', 'knocked_out_face')
 
 
 def is_animated_png(file_path):
@@ -65,6 +65,10 @@ def try_varients(emoji):
         return "man_merpeople"
     if emoji == "merperson" and "person_merpeople" in data:
         return "person_merpeople"
+    if emoji == "dizzy_face" and "knocked_out_face" in data:
+        return "knocked_out_face"
+    if emoji == "enraged_face" and "pouting_face" in data:
+        return "pouting_face"
 
     return False
 
@@ -154,6 +158,9 @@ def main():
 
         with open(os.path.join(dir_output, "metadata.json"), "w") as f:
             json.dump(data, f, indent=4)
+
+        with open(os.path.join(dir_output, "metadata.min.json"), "w") as f:
+            json.dump(data, f)
 
         return 0
 
