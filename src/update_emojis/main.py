@@ -153,7 +153,7 @@ def main():
         fetch_animated()
 
         with open(os.path.join(dir_output, "metadata.json"), "w") as f:
-            json.dump(data, f)
+            json.dump(data, f, indent=4)
 
         return 0
 
