@@ -10,27 +10,30 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Step 1: Checkout repository
       - name: Checkout the current repository
         uses: actions/checkout@v4
 
+      # Step 2: Set up Python
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
 
+      # Step 3: Install dependencies
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install Pillow unidecode
 
-      - name: Clone FluentUI Emoji repository
+      # Step 4: Clone both repositories in parallel using background execution
+      - name: Clone FluentUI Emoji and Animated Fluent Emojis
         run: |
-          git clone https://github.com/microsoft/fluentui-emoji.git
+          git clone https://github.com/microsoft/fluentui-emoji.git & # Run in background
+          git clone https://github.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis.git & # Run in background
+          wait # Wait for both to finish
 
-      - name: Clone Animated Fluent Emojis repository
-        run: |
-          git clone https://github.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis.git
-
+      # Step 5: Run Python script to combine emojis
       - name: Run Python script to combine emojis
         run: |
           python src/update_emojis/main.py
@@ -38,12 +41,14 @@ jobs:
           dir_regular: fluentui-emoji/assets
           dir_animated: Animated-Fluent-Emojis/Emojis
           dir_output: ./Emojis
-
+      
+      # Step 6: Clean up unnecessary repositories
       - name: Remove cloned repositories
         run: |
           rm -rf fluentui-emoji
           rm -rf Animated-Fluent-Emojis
-
+      
+      # Step 7: Check for changes
       - name: Check for changes
         run: |
           git config user.name "github-actions[bot]"
@@ -51,6 +56,7 @@ jobs:
           git add .
           git diff --quiet || git commit -m "Combined emojis with latest data"
 
+      # Step 8: Create Pull Request if changes were detected
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
         with:
@@ -61,4 +67,3 @@ jobs:
           labels: update, auto-generated
           reviewers: malte9799
           delete-branch: true
-          token: ${{ secrets.GITHUB_TOKEN }}
