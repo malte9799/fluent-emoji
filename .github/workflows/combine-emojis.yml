@@ -4,9 +4,6 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '0 0 * * 0'  # every Sunday at midnight (UTC)
-  push:
-    branches:
-      - main
 
 jobs:
   combine_emojis:
@@ -64,3 +61,4 @@ jobs:
           labels: update, auto-generated
           reviewers: malte9799
           delete-branch: true
+          token: ${{ secrets.GITHUB_TOKEN }}
