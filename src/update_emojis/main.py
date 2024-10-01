@@ -8,10 +8,9 @@ import re
 from PIL import Image
 from unidecode import unidecode
 
-dir_regular = "./emojis/regular/assets"
-dir_animated = "./emojis/animated/Emojis"
-
-dir_output = "./cdn/Emojis"
+dir_regular = os.getenv('dir_regular', './emojis/regular/assets')
+dir_animated = os.getenv('dir_animated', './emojis/animated/Emojis')
+dir_output = os.getenv('dir_output', './cdn/Emojis')
 
 data = {"not_found": []}
 
