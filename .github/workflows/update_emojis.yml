@@ -58,22 +58,8 @@ jobs:
       #       done
       #     done
 
-      # ------- CHECK FOR CHANGES -------
-      - name: Check if there are changes
-        id: git_check
-        run: |
-          cd cdn
-          git add .
-          if git diff --cached --quiet; then
-            echo "No changes detected."
-            echo "::set-output name=changes_detected::false"
-          else
-            echo "Changes detected."
-            echo "::set-output name=changes_detected::true"
-            
-      # ------- CREATE PULL REQUEST IF CHANGES -------
-      - name: Create Pull Request
-        if: steps.git_check.outputs.changes_detected == 'true'
+      # ------- PULL REQUEST -------
+      - name: Create pull Requirements
         uses: peter-evans/create-pull-request@v5
         with:
           path: cdn
