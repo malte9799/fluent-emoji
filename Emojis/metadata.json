@@ -4,23 +4,17 @@
         "people_holding_hands",
         "woman_and_man_holding_hands",
         "women_holding_hands",
-        "grey_heart",
-        "shaking_face",
         "face_with_crossed_out_eyes",
-        "light_blue_heart",
         "smiling_face_with_open_hands",
-        "pink_heart",
         "family_man_woman_boy_boy",
         "couple_with_heart_woman_man",
         "family_man_boy",
         "family_woman_boy",
-        "man_technologist",
         "family_woman_girl",
         "family_man_woman_boy",
         "family",
         "family_man_girl_boy",
         "family_woman_girl_girl",
-        "technologist",
         "family_man_girl",
         "family_woman_boy_boy",
         "family_man_woman_girl",
@@ -29,13 +23,6 @@
         "family_man_boy_boy",
         "family_man_girl_girl",
         "family_man_woman_girl_boy",
-        "maracas",
-        "leftwards_pushing_hand",
-        "rightwards_pushing_hand",
-        "goose",
-        "moose",
-        "jellyfish",
-        "donkey",
         "black_bird"
     ],
     "japanese_not_free_of_charge_button": {
@@ -358,6 +345,26 @@
         ],
         "unicodes": [
             "1f4df"
+        ]
+    },
+    "woman_walking_facing_right": {
+        "name": "Woman walking facing right",
+        "hasSkinTones": true,
+        "glyph": "\ud83d\udeb6\u200d\u2640\ufe0f\u200d\u27a1\ufe0f",
+        "group": "People & Body",
+        "keywords": [
+            "hike",
+            "walk",
+            "woman",
+            "woman walking"
+        ],
+        "unicodes": [
+            "1f6b6 200d 2640 fe0f 200d 27a1 fe0f",
+            "1f6b6 1f3fb 200d 2640 fe0f 200d 27a1 fe0f",
+            "1f6b6 1f3fc 200d 2640 fe0f 200d 27a1 fe0f",
+            "1f6b6 1f3fd 200d 2640 fe0f 200d 27a1 fe0f",
+            "1f6b6 1f3fe 200d 2640 fe0f 200d 27a1 fe0f",
+            "1f6b6 1f3ff 200d 2640 fe0f 200d 27a1 fe0f"
         ]
     },
     "custard": {
@@ -966,6 +973,30 @@
         ],
         "isAnimated": true
     },
+    "rightwards_pushing_hand": {
+        "name": "Rightwards pushing hand",
+        "hasSkinTones": true,
+        "glyph": "\ud83e\udef8",
+        "group": "People & Body",
+        "keywords": [
+            "high five",
+            "push",
+            "refuse",
+            "rightward",
+            "rightwards pushing hand",
+            "stop",
+            "wait"
+        ],
+        "unicodes": [
+            "1faf8",
+            "1faf8 1f3fb",
+            "1faf8 1f3fc",
+            "1faf8 1f3fd",
+            "1faf8 1f3fe",
+            "1faf8 1f3ff"
+        ],
+        "isAnimated": true
+    },
     "fountain_pen": {
         "name": "Fountain pen",
         "hasSkinTones": false,
@@ -1067,6 +1098,24 @@
             "1f965"
         ]
     },
+    "man_kneeling_facing_right": {
+        "name": "Man kneeling facing right",
+        "hasSkinTones": true,
+        "glyph": "\ud83e\uddce\u200d\u2642\ufe0f\u200d\u27a1\ufe0f",
+        "group": "People & Body",
+        "keywords": [
+            "kneeling",
+            "man"
+        ],
+        "unicodes": [
+            "1f9ce 200d 2642 fe0f 200d 27a1 fe0f",
+            "1f9ce 1f3fb 200d 2642 fe0f 200d 27a1 fe0f",
+            "1f9ce 1f3fc 200d 2642 fe0f 200d 27a1 fe0f",
+            "1f9ce 1f3fd 200d 2642 fe0f 200d 27a1 fe0f",
+            "1f9ce 1f3fe 200d 2642 fe0f 200d 27a1 fe0f",
+            "1f9ce 1f3ff 200d 2642 fe0f 200d 27a1 fe0f"
+        ]
+    },
     "high_voltage": {
         "name": "High voltage",
         "hasSkinTones": false,
@@ -1113,6 +1162,20 @@
         ],
         "unicodes": [
             "1f4f4"
+        ]
+    },
+    "video_game": {
+        "name": "Video game",
+        "hasSkinTones": false,
+        "glyph": "\ud83c\udfae",
+        "group": "Activities",
+        "keywords": [
+            "controller",
+            "game",
+            "video game"
+        ],
+        "unicodes": [
+            "1f3ae"
         ]
     },
     "tamale": {
@@ -1500,6 +1563,29 @@
         "unicodes": [
             "1f304"
         ]
+    },
+    "man_technologist": {
+        "name": "Man technologist",
+        "hasSkinTones": true,
+        "glyph": "\ud83d\udc68\u200d\ud83d\udcbb",
+        "group": "People & Body",
+        "keywords": [
+            "coder",
+            "developer",
+            "inventor",
+            "man",
+            "software",
+            "technologist"
+        ],
+        "unicodes": [
+            "1f468 200d 1f4bb",
+            "1f468 1f3fb 200d 1f4bb",
+            "1f468 1f3fc 200d 1f4bb",
+            "1f468 1f3fd 200d 1f4bb",
+            "1f468 1f3fe 200d 1f4bb",
+            "1f468 1f3ff 200d 1f4bb"
+        ],
+        "isAnimated": true
     },
     "japanese_dolls": {
         "name": "Japanese dolls",
@@ -2325,6 +2411,23 @@
         ],
         "isAnimated": true
     },
+    "pea_pod": {
+        "name": "Pea pod",
+        "hasSkinTones": false,
+        "glyph": "\ud83e\udedb",
+        "group": "Food & Drink",
+        "keywords": [
+            "beans",
+            "edamame",
+            "legume",
+            "pea",
+            "pod",
+            "vegetable"
+        ],
+        "unicodes": [
+            "1fadb"
+        ]
+    },
     "raised_fist": {
         "name": "Raised fist",
         "hasSkinTones": true,
@@ -2601,6 +2704,25 @@
             "0039 fe0f 20e3"
         ]
     },
+    "jellyfish": {
+        "name": "Jellyfish",
+        "hasSkinTones": false,
+        "glyph": "\ud83e\udebc",
+        "group": "Animals & Nature",
+        "keywords": [
+            "burn",
+            "invertebrate",
+            "jelly",
+            "jellyfish",
+            "marine",
+            "ouch",
+            "stinger"
+        ],
+        "unicodes": [
+            "1fabc"
+        ],
+        "isAnimated": true
+    },
     "student": {
         "name": "Student",
         "hasSkinTones": true,
@@ -2670,6 +2792,22 @@
             "1f990"
         ],
         "isAnimated": true
+    },
+    "blackbird": {
+        "name": "Blackbird",
+        "hasSkinTones": false,
+        "glyph": "\ud83d\udc26\u200d\u2b1b",
+        "group": "Animals & Nature",
+        "keywords": [
+            "bird",
+            "black",
+            "crow",
+            "raven",
+            "rook"
+        ],
+        "unicodes": [
+            "1f426 200d 2b1b"
+        ]
     },
     "mosque": {
         "name": "Mosque",
@@ -3769,6 +3907,26 @@
         ],
         "isAnimated": true
     },
+    "man_in_motorized_wheelchair_facing_right": {
+        "name": "Man in motorized wheelchair facing right",
+        "hasSkinTones": true,
+        "glyph": "\ud83d\udc68\u200d\ud83e\uddbc\u200d\u27a1\ufe0f",
+        "group": "People & Body",
+        "keywords": [
+            "accessibility",
+            "man",
+            "man in motorized wheelchair",
+            "wheelchair"
+        ],
+        "unicodes": [
+            "1f468 200d 1f9bc 200d 27a1 fe0f",
+            "1f468 1f3fb 200d 1f9bc 200d 27a1 fe0f",
+            "1f468 1f3fc 200d 1f9bc 200d 27a1 fe0f",
+            "1f468 1f3fd 200d 1f9bc 200d 27a1 fe0f",
+            "1f468 1f3fe 200d 1f9bc 200d 27a1 fe0f",
+            "1f468 1f3ff 200d 1f9bc 200d 27a1 fe0f"
+        ]
+    },
     "revolving_hearts": {
         "name": "Revolving hearts",
         "hasSkinTones": false,
@@ -4271,6 +4429,23 @@
         ],
         "isAnimated": true
     },
+    "wing": {
+        "name": "Wing",
+        "hasSkinTones": false,
+        "glyph": "\ud83e\udebd",
+        "group": "Animals & Nature",
+        "keywords": [
+            "angelic",
+            "aviation",
+            "bird",
+            "flying",
+            "mythology",
+            "wing"
+        ],
+        "unicodes": [
+            "1fabd"
+        ]
+    },
     "moon_cake": {
         "name": "Moon cake",
         "hasSkinTones": false,
@@ -4525,6 +4700,25 @@
             "1f9cc"
         ]
     },
+    "person_kneeling_facing_right": {
+        "name": "Person kneeling facing right",
+        "hasSkinTones": true,
+        "glyph": "\ud83e\uddce\u200d\u27a1\ufe0f",
+        "group": "People & Body",
+        "keywords": [
+            "kneel",
+            "kneeling",
+            "person kneeling"
+        ],
+        "unicodes": [
+            "1f9ce 200d 27a1 fe0f",
+            "1f9ce 1f3fb 200d 27a1 fe0f",
+            "1f9ce 1f3fc 200d 27a1 fe0f",
+            "1f9ce 1f3fd 200d 27a1 fe0f",
+            "1f9ce 1f3fe 200d 27a1 fe0f",
+            "1f9ce 1f3ff 200d 27a1 fe0f"
+        ]
+    },
     "woman_merpeople": {
         "name": "Woman merpeople",
         "hasSkinTones": true,
@@ -4705,6 +4899,24 @@
         "unicodes": [
             "1f528"
         ]
+    },
+    "maracas": {
+        "name": "Maracas",
+        "hasSkinTones": false,
+        "glyph": "\ud83e\ude87",
+        "group": "Objects",
+        "keywords": [
+            "instrument",
+            "maracas",
+            "music",
+            "percussion",
+            "rattle",
+            "shake"
+        ],
+        "unicodes": [
+            "1fa87"
+        ],
+        "isAnimated": true
     },
     "unlocked": {
         "name": "Unlocked",
@@ -5085,6 +5297,26 @@
         ],
         "unicodes": [
             "1f9af"
+        ]
+    },
+    "woman_in_manual_wheelchair_facing_right": {
+        "name": "Woman in manual wheelchair facing right",
+        "hasSkinTones": true,
+        "glyph": "\ud83d\udc69\u200d\ud83e\uddbd\u200d\u27a1\ufe0f",
+        "group": "People & Body",
+        "keywords": [
+            "accessibility",
+            "wheelchair",
+            "woman",
+            "woman in manual wheelchair"
+        ],
+        "unicodes": [
+            "1f469 200d 1f9bd 200d 27a1 fe0f",
+            "1f469 1f3fb 200d 1f9bd 200d 27a1 fe0f",
+            "1f469 1f3fc 200d 1f9bd 200d 27a1 fe0f",
+            "1f469 1f3fd 200d 1f9bd 200d 27a1 fe0f",
+            "1f469 1f3fe 200d 1f9bd 200d 27a1 fe0f",
+            "1f469 1f3ff 200d 1f9bd 200d 27a1 fe0f"
         ]
     },
     "grinning_face": {
@@ -5908,6 +6140,21 @@
         ],
         "isAnimated": true
     },
+    "wireless": {
+        "name": "Wireless",
+        "hasSkinTones": false,
+        "glyph": "\ud83d\udedc",
+        "group": "Symbols",
+        "keywords": [
+            "computer",
+            "internet",
+            "network",
+            "wireless"
+        ],
+        "unicodes": [
+            "1f6dc"
+        ]
+    },
     "person_genie": {
         "name": "Person genie",
         "hasSkinTones": false,
@@ -6344,6 +6591,28 @@
             "1f57a 1f3ff"
         ],
         "isAnimated": true
+    },
+    "woman_technologist": {
+        "name": "Woman technologist",
+        "hasSkinTones": true,
+        "glyph": "\ud83d\udc69\u200d\ud83d\udcbb",
+        "group": "People & Body",
+        "keywords": [
+            "coder",
+            "developer",
+            "inventor",
+            "software",
+            "technologist",
+            "woman"
+        ],
+        "unicodes": [
+            "1f469 200d 1f4bb",
+            "1f469 1f3fb 200d 1f4bb",
+            "1f469 1f3fc 200d 1f4bb",
+            "1f469 1f3fd 200d 1f4bb",
+            "1f469 1f3fe 200d 1f4bb",
+            "1f469 1f3ff 200d 1f4bb"
+        ]
     },
     "no_bicycles": {
         "name": "No bicycles",
@@ -7519,6 +7788,23 @@
         ],
         "isAnimated": true
     },
+    "goose": {
+        "name": "Goose",
+        "hasSkinTones": false,
+        "glyph": "\ud83e\udebf",
+        "group": "Animals & Nature",
+        "keywords": [
+            "bird",
+            "fowl",
+            "goose",
+            "honk",
+            "silly"
+        ],
+        "unicodes": [
+            "1fabf"
+        ],
+        "isAnimated": true
+    },
     "construction": {
         "name": "Construction",
         "hasSkinTones": false,
@@ -7531,6 +7817,23 @@
         "unicodes": [
             "1f6a7"
         ]
+    },
+    "light_blue_heart": {
+        "name": "Light blue heart",
+        "hasSkinTones": false,
+        "glyph": "\ud83e\ude75",
+        "group": "Smileys & Emotion",
+        "keywords": [
+            "cyan",
+            "heart",
+            "light blue",
+            "light blue heart",
+            "teal"
+        ],
+        "unicodes": [
+            "1fa75"
+        ],
+        "isAnimated": true
     },
     "kick_scooter": {
         "name": "Kick scooter",
@@ -7573,6 +7876,26 @@
         ],
         "unicodes": [
             "1f386"
+        ]
+    },
+    "man_walking_facing_right": {
+        "name": "Man walking facing right",
+        "hasSkinTones": true,
+        "glyph": "\ud83d\udeb6\u200d\u2642\ufe0f\u200d\u27a1\ufe0f",
+        "group": "People & Body",
+        "keywords": [
+            "hike",
+            "man",
+            "man walking",
+            "walk"
+        ],
+        "unicodes": [
+            "1f6b6 200d 2642 fe0f 200d 27a1 fe0f",
+            "1f6b6 1f3fb 200d 2642 fe0f 200d 27a1 fe0f",
+            "1f6b6 1f3fc 200d 2642 fe0f 200d 27a1 fe0f",
+            "1f6b6 1f3fd 200d 2642 fe0f 200d 27a1 fe0f",
+            "1f6b6 1f3fe 200d 2642 fe0f 200d 27a1 fe0f",
+            "1f6b6 1f3ff 200d 2642 fe0f 200d 27a1 fe0f"
         ]
     },
     "woman_getting_massage": {
@@ -10981,6 +11304,21 @@
             "1fa9e"
         ]
     },
+    "hair_pick": {
+        "name": "Hair pick",
+        "hasSkinTones": false,
+        "glyph": "\ud83e\udeae",
+        "group": "Objects",
+        "keywords": [
+            "Afro",
+            "comb",
+            "hair",
+            "pick"
+        ],
+        "unicodes": [
+            "1faae"
+        ]
+    },
     "no_mobile_phones": {
         "name": "No mobile phones",
         "hasSkinTones": false,
@@ -11401,6 +11739,21 @@
         ],
         "unicodes": [
             "2328 fe0f"
+        ]
+    },
+    "lime": {
+        "name": "Lime",
+        "hasSkinTones": false,
+        "glyph": "\ud83c\udf4b\u200d\ud83d\udfe9",
+        "group": "Food & Drink",
+        "keywords": [
+            "citrus",
+            "fruit",
+            "lime",
+            "tropical"
+        ],
+        "unicodes": [
+            "1f34b 200d 1f7e9"
         ]
     },
     "diamond_with_a_dot": {
@@ -11916,6 +12269,26 @@
         ],
         "isAnimated": true
     },
+    "woman_in_motorized_wheelchair_facing_right": {
+        "name": "Woman in motorized wheelchair facing right",
+        "hasSkinTones": true,
+        "glyph": "\ud83d\udc69\u200d\ud83e\uddbc",
+        "group": "People & Body",
+        "keywords": [
+            "accessibility",
+            "wheelchair",
+            "woman",
+            "woman in motorized wheelchair"
+        ],
+        "unicodes": [
+            "1f469 200d 1f9bc 200d 27a1 fe0f",
+            "1f469 1f3fb 200d 1f9bc 200d 27a1 fe0f",
+            "1f469 1f3fc 200d 1f9bc 200d 27a1 fe0f",
+            "1f469 1f3fd 200d 1f9bc 200d 27a1 fe0f",
+            "1f469 1f3fe 200d 1f9bc 200d 27a1 fe0f",
+            "1f469 1f3ff 200d 1f9bc 200d 27a1 fe0f"
+        ]
+    },
     "field_hockey": {
         "name": "Field hockey",
         "hasSkinTones": false,
@@ -12294,6 +12667,22 @@
             "1f949"
         ]
     },
+    "phoenix_bird": {
+        "name": "Phoenix bird",
+        "hasSkinTones": false,
+        "glyph": "\ud83d\udc26\u200d\ud83d\udd25",
+        "group": "Animals & Nature",
+        "keywords": [
+            "fantasy",
+            "firebird",
+            "phoenix",
+            "rebirth",
+            "reincarnation"
+        ],
+        "unicodes": [
+            "1f426 200d 1f525"
+        ]
+    },
     "baguette_bread": {
         "name": "Baguette bread",
         "hasSkinTones": false,
@@ -12320,6 +12709,26 @@
         ],
         "unicodes": [
             "262e fe0f"
+        ]
+    },
+    "man_with_white_cane_facing_right": {
+        "name": "Man with white cane facing right",
+        "hasSkinTones": true,
+        "glyph": "\ud83d\udc68\u200d\ud83e\uddaf\u200d\u27a1\ufe0f",
+        "group": "People & Body",
+        "keywords": [
+            "accessibility",
+            "blind",
+            "man",
+            "man with white cane"
+        ],
+        "unicodes": [
+            "1f468 200d 1f9af 200d 27a1 fe0f",
+            "1f468 1f3fb 200d 1f9af 200d 27a1 fe0f",
+            "1f468 1f3fc 200d 1f9af 200d 27a1 fe0f",
+            "1f468 1f3fd 200d 1f9af 200d 27a1 fe0f",
+            "1f468 1f3fe 200d 1f9af 200d 27a1 fe0f",
+            "1f468 1f3ff 200d 1f9af 200d 27a1 fe0f"
         ]
     },
     "face_with_raised_eyebrow": {
@@ -12796,6 +13205,26 @@
         ],
         "isAnimated": true
     },
+    "man_running_facing_right": {
+        "name": "Man running facing right",
+        "hasSkinTones": true,
+        "glyph": "\ud83c\udfc3\u200d\u2642\ufe0f\u200d\u27a1\ufe0f",
+        "group": "People & Body",
+        "keywords": [
+            "man",
+            "marathon",
+            "racing",
+            "running"
+        ],
+        "unicodes": [
+            "1f3c3 200d 2642 fe0f 200d 27a1 fe0f",
+            "1f3c3 1f3fb 200d 2642 fe0f 200d 27a1 fe0f",
+            "1f3c3 1f3fc 200d 2642 fe0f 200d 27a1 fe0f",
+            "1f3c3 1f3fd 200d 2642 fe0f 200d 27a1 fe0f",
+            "1f3c3 1f3fe 200d 2642 fe0f 200d 27a1 fe0f",
+            "1f3c3 1f3ff 200d 2642 fe0f 200d 27a1 fe0f"
+        ]
+    },
     "tropical_fish": {
         "name": "Tropical fish",
         "hasSkinTones": false,
@@ -13080,6 +13509,23 @@
             "2764 fe0f 200d 1f525"
         ],
         "isAnimated": true
+    },
+    "flute": {
+        "name": "Flute",
+        "hasSkinTones": false,
+        "glyph": "\ud83e\ude88",
+        "group": "Objects",
+        "keywords": [
+            "fife",
+            "flute",
+            "music",
+            "pipe",
+            "recorder",
+            "woodwind"
+        ],
+        "unicodes": [
+            "1fa88"
+        ]
     },
     "fast_down_button": {
         "name": "Fast down button",
@@ -13767,6 +14213,26 @@
             "1f532"
         ]
     },
+    "person_walking_facing_right": {
+        "name": "Person walking facing right",
+        "hasSkinTones": true,
+        "glyph": "\ud83d\udeb6\u200d\u27a1\ufe0f",
+        "group": "People & Body",
+        "keywords": [
+            "hike",
+            "person walking",
+            "walk",
+            "walking"
+        ],
+        "unicodes": [
+            "1f6b6 200d 27a1 fe0f",
+            "1f6b6 1f3fb 200d 27a1 fe0f",
+            "1f6b6 1f3fc 200d 27a1 fe0f",
+            "1f6b6 1f3fd 200d 27a1 fe0f",
+            "1f6b6 1f3fe 200d 27a1 fe0f",
+            "1f6b6 1f3ff 200d 27a1 fe0f"
+        ]
+    },
     "musical_note": {
         "name": "Musical note",
         "hasSkinTones": false,
@@ -13933,6 +14399,22 @@
         ],
         "unicodes": [
             "1f4cd"
+        ]
+    },
+    "brown_mushroom": {
+        "name": "Brown mushroom",
+        "hasSkinTones": false,
+        "glyph": "\ud83c\udf44\u200d\ud83d\udfeb",
+        "group": "Food & Drink",
+        "keywords": [
+            "brown mushroom",
+            "food",
+            "fungus",
+            "nature",
+            "vegetable"
+        ],
+        "unicodes": [
+            "1f344 200d 1f7eb"
         ]
     },
     "pig_face": {
@@ -14130,6 +14612,20 @@
             "1f62e 200d 1f4a8"
         ],
         "isAnimated": true
+    },
+    "khanda": {
+        "name": "Khanda",
+        "hasSkinTones": false,
+        "glyph": "\ud83e\udeaf",
+        "group": "Symbols",
+        "keywords": [
+            "khanda",
+            "religion",
+            "Sikh"
+        ],
+        "unicodes": [
+            "1faaf"
+        ]
     },
     "person_raising_hand": {
         "name": "Person raising hand",
@@ -15165,6 +15661,23 @@
             "23f8 fe0f"
         ]
     },
+    "shaking_face": {
+        "name": "Shaking face",
+        "hasSkinTones": false,
+        "glyph": "\ud83e\udee8",
+        "group": "Smileys & Emotion",
+        "keywords": [
+            "earthquake",
+            "face",
+            "shaking",
+            "shock",
+            "vibrate"
+        ],
+        "unicodes": [
+            "1fae8"
+        ],
+        "isAnimated": true
+    },
     "bison": {
         "name": "Bison",
         "hasSkinTones": false,
@@ -15581,6 +16094,25 @@
         ],
         "isAnimated": true
     },
+    "person_with_white_cane_facing_right": {
+        "name": "Person with white cane facing right",
+        "hasSkinTones": true,
+        "glyph": "\ud83e\uddd1\u200d\ud83e\uddaf\u200d\u27a1\ufe0f",
+        "group": "People & Body",
+        "keywords": [
+            "accessibility",
+            "blind",
+            "person with white cane"
+        ],
+        "unicodes": [
+            "1f9d1 200d 1f9af 200d 27a1 fe0f",
+            "1f9d1 1f3fb 200d 1f9af 200d 27a1 fe0f",
+            "1f9d1 1f3fc 200d 1f9af 200d 27a1 fe0f",
+            "1f9d1 1f3fd 200d 1f9af 200d 27a1 fe0f",
+            "1f9d1 1f3fe 200d 1f9af 200d 27a1 fe0f",
+            "1f9d1 1f3ff 200d 1f9af 200d 27a1 fe0f"
+        ]
+    },
     "video_camera": {
         "name": "Video camera",
         "hasSkinTones": false,
@@ -15764,6 +16296,24 @@
         ],
         "unicodes": [
             "1f489"
+        ]
+    },
+    "woman_kneeling_facing_right": {
+        "name": "Woman kneeling facing right",
+        "hasSkinTones": true,
+        "glyph": "\ud83e\uddce\u200d\u2640\ufe0f\u200d\u27a1\ufe0f",
+        "group": "People & Body",
+        "keywords": [
+            "kneeling",
+            "woman"
+        ],
+        "unicodes": [
+            "1f9ce 200d 2640 fe0f 200d 27a1 fe0f",
+            "1f9ce 1f3fb 200d 2640 fe0f 200d 27a1 fe0f",
+            "1f9ce 1f3fc 200d 2640 fe0f 200d 27a1 fe0f",
+            "1f9ce 1f3fd 200d 2640 fe0f 200d 27a1 fe0f",
+            "1f9ce 1f3fe 200d 2640 fe0f 200d 27a1 fe0f",
+            "1f9ce 1f3ff 200d 2640 fe0f 200d 27a1 fe0f"
         ]
     },
     "shamrock": {
@@ -16053,6 +16603,26 @@
         ],
         "isAnimated": true
     },
+    "woman_with_white_cane_facing_right": {
+        "name": "Woman with white cane facing right",
+        "hasSkinTones": true,
+        "glyph": "\ud83d\udc69\u200d\ud83e\uddaf\u200d\u27a1\ufe0f",
+        "group": "People & Body",
+        "keywords": [
+            "accessibility",
+            "blind",
+            "woman",
+            "woman with white cane"
+        ],
+        "unicodes": [
+            "1f469 200d 1f9af 200d 27a1 fe0f",
+            "1f469 1f3fb 200d 1f9af 200d 27a1 fe0f",
+            "1f469 1f3fc 200d 1f9af 200d 27a1 fe0f",
+            "1f469 1f3fd 200d 1f9af 200d 27a1 fe0f",
+            "1f469 1f3fe 200d 1f9af 200d 27a1 fe0f",
+            "1f469 1f3ff 200d 1f9af 200d 27a1 fe0f"
+        ]
+    },
     "jar": {
         "name": "Jar",
         "hasSkinTones": false,
@@ -16214,6 +16784,24 @@
             "1f919 1f3ff"
         ],
         "isAnimated": true
+    },
+    "folding_hand_fan": {
+        "name": "Folding hand fan",
+        "hasSkinTones": false,
+        "glyph": "\ud83e\udead",
+        "group": "Objects",
+        "keywords": [
+            "cooling",
+            "dance",
+            "fan",
+            "flutter",
+            "folding hand fan",
+            "hot",
+            "shy"
+        ],
+        "unicodes": [
+            "1faad"
+        ]
     },
     "ferris_wheel": {
         "name": "Ferris wheel",
@@ -17527,6 +18115,25 @@
         ],
         "isAnimated": true
     },
+    "person_in_manual_wheelchair_facing_right": {
+        "name": "Person in manual wheelchair facing right",
+        "hasSkinTones": true,
+        "glyph": "\ud83e\uddd1\u200d\ud83e\uddbd\u200d\u27a1\ufe0f",
+        "group": "People & Body",
+        "keywords": [
+            "accessibility",
+            "person in manual wheelchair",
+            "wheelchair"
+        ],
+        "unicodes": [
+            "1f9d1 200d 1f9bd 200d 27a1 fe0f",
+            "1f9d1 1f3fb 200d 1f9bd 200d 27a1 fe0f",
+            "1f9d1 1f3fc 200d 1f9bd 200d 27a1 fe0f",
+            "1f9d1 1f3fd 200d 1f9bd 200d 27a1 fe0f",
+            "1f9d1 1f3fe 200d 1f9bd 200d 27a1 fe0f",
+            "1f9d1 1f3ff 200d 1f9bd 200d 27a1 fe0f"
+        ]
+    },
     "eleven_oclock": {
         "name": "Eleven oclock",
         "hasSkinTones": false,
@@ -17965,6 +18572,20 @@
             "1f466 1f3ff"
         ],
         "isAnimated": true
+    },
+    "head_shaking_horizontally": {
+        "name": "Head shaking horizontally",
+        "hasSkinTones": false,
+        "glyph": "\ud83d\ude42\u200d\u2194\ufe0f",
+        "group": "Smileys & Emotion",
+        "keywords": [
+            "head shaking horizontally",
+            "no",
+            "shake"
+        ],
+        "unicodes": [
+            "1f642 200d 2194 fe0f"
+        ]
     },
     "black_flag": {
         "name": "Black flag",
@@ -19454,6 +20075,26 @@
             "1f3a7"
         ]
     },
+    "woman_running_facing_right": {
+        "name": "Woman running facing right",
+        "hasSkinTones": true,
+        "glyph": "\ud83c\udfc3\u200d\u2640\ufe0f\u200d\u27a1\ufe0f",
+        "group": "People & Body",
+        "keywords": [
+            "marathon",
+            "racing",
+            "running",
+            "woman"
+        ],
+        "unicodes": [
+            "1f3c3 200d 2640 fe0f 200d 27a1 fe0f",
+            "1f3c3 1f3fb 200d 2640 fe0f 200d 27a1 fe0f",
+            "1f3c3 1f3fc 200d 2640 fe0f 200d 27a1 fe0f",
+            "1f3c3 1f3fd 200d 2640 fe0f 200d 27a1 fe0f",
+            "1f3c3 1f3fe 200d 2640 fe0f 200d 27a1 fe0f",
+            "1f3c3 1f3ff 200d 2640 fe0f 200d 27a1 fe0f"
+        ]
+    },
     "busts_in_silhouette": {
         "name": "Busts in silhouette",
         "hasSkinTones": false,
@@ -20011,6 +20652,21 @@
         ],
         "isAnimated": true
     },
+    "ginger_root": {
+        "name": "Ginger root",
+        "hasSkinTones": false,
+        "glyph": "\ud83e\udeda",
+        "group": "Food & Drink",
+        "keywords": [
+            "beer",
+            "ginger root",
+            "root",
+            "spice"
+        ],
+        "unicodes": [
+            "1fada"
+        ]
+    },
     "hibiscus": {
         "name": "Hibiscus",
         "hasSkinTones": false,
@@ -20138,6 +20794,23 @@
         "unicodes": [
             "3299 fe0f"
         ]
+    },
+    "moose": {
+        "name": "Moose",
+        "hasSkinTones": false,
+        "glyph": "\ud83e\udece",
+        "group": "Animals & Nature",
+        "keywords": [
+            "animal",
+            "antlers",
+            "elk",
+            "mammal",
+            "moose"
+        ],
+        "unicodes": [
+            "1face"
+        ],
+        "isAnimated": true
     },
     "nine_thirty": {
         "name": "Nine-thirty",
@@ -21016,6 +21689,25 @@
             "1f9fd"
         ]
     },
+    "person_in_motorized_wheelchair_facing_right": {
+        "name": "Person in motorized wheelchair facing right",
+        "hasSkinTones": true,
+        "glyph": "\ud83e\uddd1\u200d\ud83e\uddbc\u200d\u27a1\ufe0f",
+        "group": "People & Body",
+        "keywords": [
+            "accessibility",
+            "person in motorized wheelchair",
+            "wheelchair"
+        ],
+        "unicodes": [
+            "1f9d1 200d 1f9bc 200d 27a1 fe0f",
+            "1f9d1 1f3fb 200d 1f9bc 200d 27a1 fe0f",
+            "1f9d1 1f3fc 200d 1f9bc 200d 27a1 fe0f",
+            "1f9d1 1f3fd 200d 1f9bc 200d 27a1 fe0f",
+            "1f9d1 1f3fe 200d 1f9bc 200d 27a1 fe0f",
+            "1f9d1 1f3ff 200d 1f9bc 200d 27a1 fe0f"
+        ]
+    },
     "man_swimming": {
         "name": "Man swimming",
         "hasSkinTones": true,
@@ -21136,6 +21828,23 @@
         ],
         "unicodes": [
             "1f3d3"
+        ]
+    },
+    "hyacinth": {
+        "name": "Hyacinth",
+        "hasSkinTones": false,
+        "glyph": "\ud83e\udebb",
+        "group": "Animals & Nature",
+        "keywords": [
+            "bluebonnet",
+            "flower",
+            "hyacinth",
+            "lavender",
+            "lupine",
+            "snapdragon"
+        ],
+        "unicodes": [
+            "1fabb"
         ]
     },
     "heart_with_arrow": {
@@ -21363,6 +22072,30 @@
             "1f468 1f3fd 200d 1f9af",
             "1f468 1f3fe 200d 1f9af",
             "1f468 1f3ff 200d 1f9af"
+        ],
+        "isAnimated": true
+    },
+    "leftwards_pushing_hand": {
+        "name": "Leftwards pushing hand",
+        "hasSkinTones": true,
+        "glyph": "\ud83e\udef7",
+        "group": "People & Body",
+        "keywords": [
+            "high five",
+            "leftward",
+            "leftwards pushing hand",
+            "push",
+            "refuse",
+            "stop",
+            "wait"
+        ],
+        "unicodes": [
+            "1faf7",
+            "1faf7 1f3fb",
+            "1faf7 1f3fc",
+            "1faf7 1f3fd",
+            "1faf7 1f3fe",
+            "1faf7 1f3ff"
         ],
         "isAnimated": true
     },
@@ -21970,6 +22703,28 @@
             "1f19a"
         ]
     },
+    "technologist": {
+        "name": "Technologist",
+        "hasSkinTones": true,
+        "glyph": "\ud83e\uddd1\u200d\ud83d\udcbb",
+        "group": "People & Body",
+        "keywords": [
+            "coder",
+            "developer",
+            "inventor",
+            "software",
+            "technologist"
+        ],
+        "unicodes": [
+            "1f9d1 200d 1f4bb",
+            "1f9d1 1f3fb 200d 1f4bb",
+            "1f9d1 1f3fc 200d 1f4bb",
+            "1f9d1 1f3fd 200d 1f4bb",
+            "1f9d1 1f3fe 200d 1f4bb",
+            "1f9d1 1f3ff 200d 1f4bb"
+        ],
+        "isAnimated": true
+    },
     "poultry_leg": {
         "name": "Poultry leg",
         "hasSkinTones": false,
@@ -22044,6 +22799,42 @@
         ],
         "unicodes": [
             "1f924"
+        ],
+        "isAnimated": true
+    },
+    "grey_heart": {
+        "name": "Grey heart",
+        "hasSkinTones": false,
+        "glyph": "\ud83e\ude76",
+        "group": "Smileys & Emotion",
+        "keywords": [
+            "gray",
+            "grey heart",
+            "heart",
+            "silver",
+            "slate"
+        ],
+        "unicodes": [
+            "1fa76"
+        ],
+        "isAnimated": true
+    },
+    "donkey": {
+        "name": "Donkey",
+        "hasSkinTones": false,
+        "glyph": "\ud83e\udecf",
+        "group": "Animals & Nature",
+        "keywords": [
+            "animal",
+            "ass",
+            "burro",
+            "donkey",
+            "mammal",
+            "mule",
+            "stubborn"
+        ],
+        "unicodes": [
+            "1facf"
         ],
         "isAnimated": true
     },
@@ -22164,6 +22955,37 @@
         ],
         "unicodes": [
             "1f5ff"
+        ]
+    },
+    "person_running_facing_right": {
+        "name": "Person running facing right",
+        "hasSkinTones": true,
+        "glyph": "\ud83c\udfc3\u200d\u27a1\ufe0f",
+        "group": "People & Body",
+        "keywords": [
+            "marathon",
+            "person running",
+            "running"
+        ],
+        "unicodes": [
+            "1f3c3 200d 27a1 fe0f",
+            "1f3c3 1f3fb 200d 27a1 fe0f",
+            "1f3c3 1f3c3 200d 27a1 fe0f",
+            "1f3c3 1f3fd 200d 27a1 fe0f",
+            "1f3c3 1f3fe 200d 27a1 fe0f",
+            "1f3c3 1f3ff 200d 27a1 fe0f"
+        ]
+    },
+    "paperclip": {
+        "name": "Paperclip",
+        "hasSkinTones": false,
+        "glyph": "\ud83d\udcce",
+        "group": "Objects",
+        "keywords": [
+            "paperclip"
+        ],
+        "unicodes": [
+            "1f4ce"
         ]
     },
     "ng_button": {
@@ -22464,6 +23286,26 @@
             "1f93d 1f3fd",
             "1f93d 1f3fe",
             "1f93d 1f3ff"
+        ]
+    },
+    "man_in_manual_wheelchair_facing_right": {
+        "name": "Man in manual wheelchair facing right",
+        "hasSkinTones": true,
+        "glyph": "\ud83d\udc68\u200d\ud83e\uddbd\u200d\u27a1\ufe0f",
+        "group": "People & Body",
+        "keywords": [
+            "accessibility",
+            "man",
+            "man in manual wheelchair",
+            "wheelchair"
+        ],
+        "unicodes": [
+            "1f468 200d 1f9bd 200d 27a1 fe0f",
+            "1f468 1f3fb 200d 1f9bd 200d 27a1 fe0f",
+            "1f468 1f3fc 200d 1f9bd 200d 27a1 fe0f",
+            "1f468 1f3fd 200d 1f9bd 200d 27a1 fe0f",
+            "1f468 1f3fe 200d 1f9bd 200d 27a1 fe0f",
+            "1f468 1f3ff 200d 1f9bd 200d 27a1 fe0f"
         ]
     },
     "kangaroo": {
@@ -22870,6 +23712,20 @@
         ],
         "unicodes": [
             "1f337"
+        ]
+    },
+    "head_shaking_vertically": {
+        "name": "Head shaking vertically",
+        "hasSkinTones": false,
+        "glyph": "\ud83d\ude42\u200d\u2195\ufe0f",
+        "group": "Smileys & Emotion",
+        "keywords": [
+            "head shaking vertically",
+            "nod",
+            "yes"
+        ],
+        "unicodes": [
+            "1f642 200d 2195 fe0f"
         ]
     },
     "woman_climbing": {
@@ -23788,6 +24644,23 @@
             "1f3c8"
         ]
     },
+    "broken_chain": {
+        "name": "Broken chain",
+        "hasSkinTones": false,
+        "glyph": "\u26d3\ufe0f\u200d\ud83d\udca5",
+        "group": "Objects",
+        "keywords": [
+            "break",
+            "breaking",
+            "broken chain",
+            "chain",
+            "cuffs",
+            "freedom"
+        ],
+        "unicodes": [
+            "26d3 fe0f 200d 1f4a5"
+        ]
+    },
     "purple_circle": {
         "name": "Purple circle",
         "hasSkinTones": false,
@@ -24071,6 +24944,23 @@
             "1f469 1f3fd 200d 1f393",
             "1f469 1f3fe 200d 1f393",
             "1f469 1f3ff 200d 1f393"
+        ],
+        "isAnimated": true
+    },
+    "pink_heart": {
+        "name": "Pink heart",
+        "hasSkinTones": false,
+        "glyph": "\ud83e\ude77",
+        "group": "Smileys & Emotion",
+        "keywords": [
+            "cute",
+            "heart",
+            "like",
+            "love",
+            "pink"
+        ],
+        "unicodes": [
+            "1fa77"
         ],
         "isAnimated": true
     },
