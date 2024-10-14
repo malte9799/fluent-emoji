@@ -1,0 +1,34 @@
+name: Generate Gource Visualization
+
+on:
+  push:
+    branches:
+      - main  # or the branch you want to run this on
+  workflow_dispatch:  # Allows manual trigger
+
+jobs:
+  gource-visualization:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install Gource
+        run: sudo apt-get install -y gource
+
+      - name: Install FFmpeg
+        run: sudo apt-get install -y ffmpeg
+
+      - name: Make script executable
+        run: chmod +x ./src/gource-visualization/gource.sh
+
+      - name: Run Gource Visualization
+        run: |
+          ./src/gource-visualization/gource.sh '${{ github.event.repository.name }}' ./output-visualization
+
+      - name: Upload Visualization
+        uses: actions/upload-artifact@v2
+        with:
+          name: gource-visualization
+          path: ./output-visualization.mp4
