@@ -28,7 +28,7 @@ jobs:
           ./src/gource-visualization/gource.sh '${{ github.event.repository.name }}' ./output-visualization
 
       - name: Upload Visualization
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: gource-visualization
           path: ./output-visualization.mp4
