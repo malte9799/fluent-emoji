@@ -14,11 +14,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Install Gource
-        run: sudo apt-get install -y gource
+      - name: Install Gource and dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gource ffmpeg xvfb
 
-      - name: Install FFmpeg
-        run: sudo apt-get install -y ffmpeg
+      - name: Start Xvfb
+        run: |
+          Xvfb :0 -screen 0 1920x1080x24 &
+          export DISPLAY=:0
 
       - name: Make script executable
         run: chmod +x ./src/gource-visualization/gource.sh
@@ -28,7 +32,7 @@ jobs:
           ./src/gource-visualization/gource.sh '${{ github.event.repository.name }}' ./output-visualization
 
       - name: Upload Visualization
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v2
         with:
           name: gource-visualization
           path: ./output-visualization.mp4
