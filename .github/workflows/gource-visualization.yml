@@ -1,10 +1,10 @@
 name: Generate Gource Visualization
 
 on:
-  push:
-    branches:
-      - main  # or the branch you want to run this on
-  workflow_dispatch:  # Allows manual trigger
+  # push:
+  #   branches:
+  #     - main
+  workflow_dispatch:
 
 jobs:
   gource-visualization:
@@ -24,12 +24,18 @@ jobs:
           Xvfb :0 -screen 0 1920x1080x24 &
           export DISPLAY=:0
 
-      - name: Make script executable
-        run: chmod +x ./src/gource-visualization/gource.sh
-
-      - name: Run Gource Visualization
+      - name: Generate Gource Visualization
         run: |
-          ./src/gource-visualization/gource.sh '${{ github.event.repository.name }}' ./output-visualization
+          # Variables
+          title='${{ github.event.repository.name }}'
+          output_file_name='./output-visualization'
+          frame_rate=60
+
+          # Gource rendering with OpenGL (using Xvfb to simulate the display)
+          gource -r $frame_rate --multi-sampling --key --title "$title" --seconds-per-day .1 -1920x1080 -o ${output_file_name}.ppm
+
+          # Convert to MP4 using FFmpeg
+          ffmpeg -r $frame_rate -f image2pipe -vcodec ppm -i ${output_file_name}.ppm -c:v libx264 -pix_fmt yuv420p -profile:v baseline -level 3.0 -crf 4 -preset veryslow -an -movflags +faststart -threads 0 ${output_file_name}.mp4
 
       - name: Upload Visualization
         uses: actions/upload-artifact@v4
