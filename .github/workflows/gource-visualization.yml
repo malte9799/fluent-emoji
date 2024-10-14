@@ -19,10 +19,10 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y gource ffmpeg xvfb
 
-      - name: Start Xvfb
+      - name: Start Xvfb (virtual display)
         run: |
-          Xvfb :0 -screen 0 1920x1080x24 &
-          export DISPLAY=:0
+          Xvfb :99 -screen 0 1920x1080x24 &
+          export DISPLAY=:99
 
       - name: Generate Gource Visualization
         run: |
@@ -31,10 +31,10 @@ jobs:
           output_file_name='./output-visualization'
           frame_rate=60
 
-          # Gource rendering with OpenGL (using Xvfb to simulate the display)
+          # Run Gource with Xvfb (virtual display)
           gource -r $frame_rate --multi-sampling --key --title "$title" --seconds-per-day .1 -1920x1080 -o ${output_file_name}.ppm
 
-          # Convert to MP4 using FFmpeg
+          # Convert the output to MP4 using FFmpeg
           ffmpeg -r $frame_rate -f image2pipe -vcodec ppm -i ${output_file_name}.ppm -c:v libx264 -pix_fmt yuv420p -profile:v baseline -level 3.0 -crf 4 -preset veryslow -an -movflags +faststart -threads 0 ${output_file_name}.mp4
 
       - name: Upload Visualization
